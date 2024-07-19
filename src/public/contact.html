@@ -65,8 +65,75 @@
         </div>
       </div>
     </nav>
-    <main class="bg-body">
-      <div class="container min-vh-100"></div>
+    <main class="py-5">
+      <div class="container">
+        <form
+          id="contactForm"
+          action="/send-email"
+          method="post"
+          class="needs-validation"
+          novalidate
+        >
+          <div class="mb-3">
+            <label class="form-label" for="name">Name:</label>
+            <input
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              type="text"
+              required
+            />
+            <div class="invalid-feedback">Please enter a name.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="email">Email:</label>
+            <input
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              type="email"
+              required
+            />
+            <div id="emailHelp" class="form-text bg-link-color">
+              We'll never share your email with anyone else.
+            </div>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="message">Message:</label>
+            <textarea
+              rows="3"
+              class="form-control"
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Please enter a message in the textarea.
+            </div>
+          </div>
+          <div class="mb-3">
+            <button
+              type="submit"
+              class="btn btn-secondary btn-lg fw-bold"
+              id="submitButton"
+            >
+              Submit
+            </button>
+            <div
+              class="spinner-border"
+              id="spinner"
+              role="status"
+              style="display: none"
+            >
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </form>
+      </div>
     </main>
     <footer class="bg-dark p-3">
       <div class="container text-center">
@@ -101,6 +168,28 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      (() => {
+        "use strict";
+
+        const forms = document.querySelectorAll(".needs-validation");
+
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
     <script src="./js/main.js"></script>
   </body>
 </html>
