@@ -2,7 +2,50 @@
 
 /* Reset Styles */
 
+a {
+  text-decoration: none;
+  color: var(--bs-gray-500);
+  transition: all 0.3s ease-out;
+}
+
+a:hover {
+  color: var(--bs-orange);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+small {
+  color: var(--bs-gray-500);
+}
+
 /* Bootstrap Styles */
+
+.navbar-brand img {
+  /* width: auto;
+  height: 3rem; */
+  transition: all 0.3s ease-out;
+  filter: drop-shadow(0 0 10px var(--bs-black));
+}
+
+.navbar-brand img:hover {
+  filter: drop-shadow(0 0 10px var(--bs-danger));
+}
+
+.nav-link {
+  color: var(--bs-gray-500);
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+}
+
+.nav-link.active {
+  color: var(--bs-orange) !important;
+}
+
+.nav-link:hover {
+  color: var(--bs-orange);
+}
 
 /* My Styles */
 
@@ -19,7 +62,7 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-	/* .nav-item:hover {
+  /* .nav-item:hover {
 		background-color: transparent;
 	} */
 }
