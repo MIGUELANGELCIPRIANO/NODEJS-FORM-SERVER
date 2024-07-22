@@ -1,5 +1,13 @@
 /* Custom Properties */
 
+:root {
+	--tango: #f26716;
+	--fire: #a62f03;
+	--indian-tan: #591202;
+	--sepia-black: rgb(38, 1, 1);
+	--cod-gray: #0d0d0d;
+}
+
 /* Reset Styles */
 
 a {
@@ -9,29 +17,35 @@ a {
 }
 
 a:hover {
-	color: var(--bs-orange);
+	color: var(--tango);
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-small,
-.form-text {
+small {
 	color: var(--bs-gray-500);
 }
 
 /* Bootstrap Styles */
 
-.navbar-brand img {
-	/* width: auto;
-  height: 3rem; */
-	transition: all 0.3s ease-out;
-	filter: drop-shadow(0 0 10px var(--bs-black));
+.bg-dark {
+	background-color: var(--cod-gray) !important;
 }
 
-.navbar-brand img:hover {
-	filter: drop-shadow(0 0 10px var(--bs-danger));
+.btn-dark {
+	border: none;
+	background-color: var(--fire);
+	transition: all 0.3s ease-out;
+}
+
+.btn-dark:hover {
+	background-color: var(--tango);
+}
+
+.form-text {
+	color: var(--bs-gray-500);
 }
 
 .nav-link {
@@ -41,14 +55,22 @@ small,
 }
 
 .nav-link.active {
-	color: var(--bs-orange) !important;
+	color: var(--tango) !important;
 }
 
 .nav-link:hover {
-	color: var(--bs-orange);
+	color: var(--tango);
 }
 
 /* My Styles */
+
+.bg-hero-image {
+	background: linear-gradient(0deg, rgba(38, 1, 1, 0.75), rgba(38, 1, 1, 0.75)),
+		var(--bg-image);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
 
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
