@@ -21,13 +21,13 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./css/styles.css" />
-		<link rel="icon" href="" />
+		<link rel="icon" href="./img/bison-brand.png" />
 	</head>
 	<body>
 		<nav class="navbar sticky-top navbar-expand-lg bg-black">
 			<div class="container">
 				<a class="navbar-brand" href="#">
-					<img src="" alt="" width="auto" height="48" />
+					<img src="./img/bison-brand.png" alt="bison-brand" />
 				</a>
 				<button
 					class="navbar-toggler"
@@ -62,8 +62,16 @@
 		</nav>
 		<main class="bg-dark">
 			<div
-				class="container min-vh-100 d-flex justify-content-center align-items-center"
+				class="container min-vh-100 d-flex flex-column justify-content-center align-items-center"
 			>
+				<article class="text-center text-white">
+					<h1>Contact us</h1>
+					<p class="fs-5">Send your comments</p>
+					<p class="fs-6">
+						For more information, please contact us at
+						<a href="mailto:info@company.com">info@company.com</a>
+					</p>
+				</article>
 				<form
 					id="contactForm"
 					action="/send-email"
