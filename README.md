@@ -1,6 +1,6 @@
 # NODEJS-FORM-SERVER
 
-<img width="50%" height=auto src="./src/public/img/" />
+<img width="50%" height=auto src="./src/public/img/nodejs-form-server.png" />
 
 ## INTRODUCTION
 
