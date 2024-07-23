@@ -2,9 +2,12 @@
 
 :root {
 	--tango: #f26716;
+	--tango-25: rgba(242, 103, 22, 0.25);
 	--fire: #a62f03;
 	--indian-tan: #591202;
-	--sepia-black: rgb(38, 1, 1);
+	--indian-tan-75: #591202bf;
+	--sepia-black: #260101;
+	--sepia-black-75: #260101bf;
 	--cod-gray: #0d0d0d;
 }
 
@@ -44,6 +47,24 @@ small {
 	background-color: var(--tango);
 }
 
+.form-control {
+	color: var(--bs-white-rgb);
+	background-color: var(--indian-tan-75);
+	border: var(--bs-border-width) solid var(--fire);
+	transition: all 0.15s ease-in-out;
+}
+
+.form-control:focus {
+	color: var(--bs-white-rgb);
+	background-color: var(--indian-tan-75);
+	border: var(--bs-border-width) solid var(--fire);
+	box-shadow: 0 0 0 0.25rem var(--tango-25);
+}
+
+.form-control::placeholder {
+	color: var(--bs-gray-500);
+}
+
 .form-text {
 	color: var(--bs-gray-500);
 }
@@ -62,10 +83,26 @@ small {
 	color: var(--tango);
 }
 
+.was-validated .form-control:valid,
+.form-control.is-valid {
+	border-color: var(--fire);
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23f26716' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+.was-validated .form-control:valid:focus,
+.form-control.is-valid:focus {
+	border-color: var(--fire);
+	box-shadow: 0 0 0 0.25rem var(--tango-25);
+}
+
 /* My Styles */
 
 .bg-hero-image {
-	background: linear-gradient(0deg, rgba(38, 1, 1, 0.75), rgba(38, 1, 1, 0.75)),
+	background: linear-gradient(
+			0deg,
+			var(--sepia-black-75),
+			var(--sepia-black-75)
+		),
 		var(--bg-image);
 	background-repeat: no-repeat;
 	background-size: cover;
