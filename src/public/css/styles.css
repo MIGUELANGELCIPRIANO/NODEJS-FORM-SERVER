@@ -83,6 +83,11 @@ small {
 	color: var(--tango);
 }
 
+.spinner-border {
+	border-color: var(--tango);
+	border-right-color: transparent;
+}
+
 .was-validated .form-control:valid,
 .form-control.is-valid {
 	border-color: var(--fire);
