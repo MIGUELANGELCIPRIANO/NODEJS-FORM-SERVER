@@ -24,9 +24,9 @@
 		<link rel="icon" href="./img/bison-brand.png" />
 	</head>
 	<body>
-		<nav class="navbar sticky-top navbar-expand-lg bg-dark">
+		<nav class="navbar navbar-dark sticky-top navbar-expand-lg bg-dark">
 			<div class="container">
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="index.html">
 					<img
 						src="./img/bison-brand.png"
 						alt="bison-brand"
@@ -35,7 +35,7 @@
 					/>
 				</a>
 				<button
-					class="navbar-toggler"
+					class="navbar-toggler border-0"
 					type="button"
 					data-bs-toggle="collapse"
 					data-bs-target="#navbarNav"
@@ -123,6 +123,22 @@
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
 		></script>
-		<script src="/js/main.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const navbarToggler = document.querySelector('.navbar-toggler')
+
+				navbarToggler.addEventListener('click', function () {
+					if (navbarToggler.getAttribute('aria-expanded') === 'true') {
+						navbarToggler.style.boxShadow = 'none'
+					}
+				})
+
+				navbarToggler.addEventListener('focusout', function () {
+					if (navbarToggler.getAttribute('aria-expanded') === 'false') {
+						navbarToggler.style.boxShadow = ''
+					}
+				})
+			})
+		</script>
 	</body>
 </html>
